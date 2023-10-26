@@ -6,7 +6,7 @@ import ua.edu.ucu.apps.flowerstore.flower.*;
 
 @Getter
 @Setter
-class Rose extends Flower {
+public class Rose extends Flower {
     private double numberOfThorns;
 
     Rose(double sepalLength, FlowerColor color,
@@ -15,7 +15,7 @@ class Rose extends Flower {
         this.numberOfThorns = numberOfThorns;
     }
 
-    Rose() {
+    public Rose() {
         super(45, FlowerColor.RED, 0.8, FlowerType.ROSE);
     }
 
