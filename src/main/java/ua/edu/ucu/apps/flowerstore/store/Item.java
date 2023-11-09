@@ -1,7 +1,7 @@
 package ua.edu.ucu.apps.flowerstore.store;
 
 import lombok.Getter;
-import ua.edu.ucu.apps.flowerstore.flower.Flower;
+import ua.edu.ucu.apps.flowerstore.spring.flower.Flower;
 
 @Getter
 public class Item {

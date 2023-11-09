@@ -6,5 +6,5 @@ abstract class Item {
     public String getDescription() {
         return description;
     }
-    abstract double price();
+    public abstract double price();
 }

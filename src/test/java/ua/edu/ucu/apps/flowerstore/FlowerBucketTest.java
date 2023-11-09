@@ -3,8 +3,8 @@ package ua.edu.ucu.apps.flowerstore;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
-import ua.edu.ucu.apps.flowerstore.flower.Flower;
-import ua.edu.ucu.apps.flowerstore.flowers.Rose;
+import ua.edu.ucu.apps.flowerstore.spring.flower.Flower;
+import ua.edu.ucu.apps.flowerstore.spring.flowers.Rose;
 
 import java.util.Random;
 
@@ -24,7 +24,7 @@ public class FlowerBucketTest {
     public void testPrice() {
         int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
         int quantity = RANDOM_GENERATOR.nextInt(MAX_QUANTITY);
-        Flower flower = new Rose();
+        Flower flower = new     Rose();
         flower.setPrice(price);
         FlowerPack flowerPack = new FlowerPack(flower, quantity);
         flowerBucket.add(flowerPack);

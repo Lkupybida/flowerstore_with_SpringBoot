@@ -7,11 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="lab7" />
+        <module name="flowerstore" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="flowerstore" target="21" />
+      <module name="lab7" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

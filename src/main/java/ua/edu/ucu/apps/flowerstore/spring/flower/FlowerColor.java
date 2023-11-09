@@ -1,16 +1,11 @@
-package ua.edu.ucu.apps.flowerstore.flower;
+package ua.edu.ucu.apps.flowerstore.spring.flower;
 
-public enum FlowerType {
-
-    CHAMOMILE("chamomile"),
-
-    ROSE("rose"),
-
-    TULIP("tulip");
+public enum FlowerColor {
+    RED("#FF0000"), BLUE("#0000FF");
 
     private final String stringRepresentation;
 
-    FlowerType(String stringRepresentation) {
+    FlowerColor(String stringRepresentation) {
         this.stringRepresentation = stringRepresentation;
     }
 

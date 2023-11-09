@@ -1,24 +1,27 @@
 package ua.edu.ucu.apps.flowerstore.spring;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestMapping;
-import ua.edu.ucu.apps.flowerstore.flower.Flower;
-import ua.edu.ucu.apps.flowerstore.flower.FlowerColor;
-import ua.edu.ucu.apps.flowerstore.flower.FlowerType;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import ua.edu.ucu.apps.flowerstore.spring.flower.Flower;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/flowers")
 public class FlowerController {
-    @GetMapping("/list")
-    public List<Flower> getFlowers() {
-        return List.of(new Flower(45, FlowerColor.RED, 0.8, FlowerType.ROSE));
+    private FlowerService flowerService;
+
+    @Autowired
+    public FlowerController(FlowerService flowerService) {
+        this.flowerService = flowerService;
     }
 
-    @GetMapping("/")  // Add this mapping for the root URL
-    public String welcome() {
-        return "Welcome to the Flower Store API!";
+    @GetMapping("/list")
+    public List<Flower> getFlowers() {
+        return flowerService.getFlowers();
+    }
+    @PostMapping("/add")
+    public void addFlower(@RequestBody Flower flower) {
+        flowerService.add(flower);
     }
 }
