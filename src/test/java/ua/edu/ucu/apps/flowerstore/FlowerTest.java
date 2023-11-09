@@ -12,12 +12,17 @@ import ua.edu.ucu.apps.flowerstore.spring.flower.FlowerType;
 
 public class FlowerTest {
     private static final Random RANDOM_GENERATOR = new Random();
+    private static final int DEFAULT_SEPAL_LENGTH = 45;
+    private static final double DEFAULT_PRICE = 0.8;
     private static final int MAX_PRICE = 100;
+    private static final FlowerColor DEFAULT_COLOR = FlowerColor.RED;
+    private static final FlowerType DEFAULT_FLOWER_TYPE = FlowerType.ROSE;
+
     private Flower flower;
 
     @BeforeEach
     public void init() {
-        flower = new Flower(45, FlowerColor.RED, 0.8, FlowerType.ROSE);
+        flower = new Flower(DEFAULT_SEPAL_LENGTH, DEFAULT_COLOR, DEFAULT_PRICE, DEFAULT_FLOWER_TYPE);
     }
 
     @Test

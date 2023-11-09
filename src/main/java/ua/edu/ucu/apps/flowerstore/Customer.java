@@ -3,31 +3,43 @@ package ua.edu.ucu.apps.flowerstore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-@Getter @AllArgsConstructor
+@Getter
 public class Customer {
-    double money_in_wallet = 696969;
-    double money_on_paypal = 420;
-    public void setMoney_in_wallet(double money_in_wallet) {
-        this.money_in_wallet = money_in_wallet;
+    private double moneyInWallet;
+    private double moneyOnPaypal;
+
+    public Customer(double moneyInWallet, double moneyOnPaypal) {
+        this.moneyInWallet = moneyInWallet;
+        this.moneyOnPaypal = moneyOnPaypal;
     }
+
+    public double getMoneyInWallet() {
+        return moneyInWallet;
+    }
+
+    public void setMoneyInWallet(double moneyInWallet) {
+        this.moneyInWallet = moneyInWallet;
+    }
+
+    public double getMoneyOnPaypal() {
+        return moneyOnPaypal;
+    }
+
+    public void setMoneyOnPaypal(double moneyOnPaypal) {
+        this.moneyOnPaypal = moneyOnPaypal;
+    }
+
 
     public void getMoneyFromWallet(double loss) {
-        double money = getMoney_in_wallet();
+        double money = getMoneyInWallet();
         money = money - loss;
-        setMoney_in_wallet(money);
-    }
-
-    public void setMoney_on_paypal(double money_in_wallet) {
-        this.money_in_wallet = money_in_wallet;
+        setMoneyInWallet(money);
     }
 
     public double getMoneyFromPaypal(double loss) {
-        double money = getMoney_in_wallet();
+        double money = getMoneyOnPaypal();
         money = money - loss;
-        setMoney_in_wallet(money);
+        setMoneyOnPaypal(money);
         return loss;
-    }
-    public Customer() {
-        Customer customer = new Customer(6969, 420);
     }
 }

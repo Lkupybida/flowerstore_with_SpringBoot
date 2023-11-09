@@ -1,7 +1,7 @@
 package ua.edu.ucu.apps.flowerstore;
 
 abstract class Item {
-    String description;
+    private String description;
 
     public String getDescription() {
         return description;

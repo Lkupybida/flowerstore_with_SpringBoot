@@ -11,10 +11,10 @@ import java.util.List;
 @Getter
 public class Order {
     private List<Item> items;
-    private LocalDateTime order_number;
+    private LocalDateTime orderNumber;
 
-    public Order(LocalDateTime order_number) {
-        this.order_number = LocalDateTime.now();
+    public Order(LocalDateTime orderNumber) {
+        this.orderNumber = LocalDateTime.now();
         this.items = new ArrayList<>();
     }
     public void addFlowers(Item item) {
@@ -37,11 +37,11 @@ public class Order {
     }
 
     public double getOrderPrice() {
-        double order_price = 0.0;
+        double orderPrice = 0.0;
         for (Item item : items) {
-            order_price += item.getItemPrice();
+            orderPrice += item.getItemPrice();
         }
-        return order_price;
+        return orderPrice;
     }
 
 }

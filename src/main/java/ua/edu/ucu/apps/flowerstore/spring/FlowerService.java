@@ -7,7 +7,7 @@ import ua.edu.ucu.apps.flowerstore.spring.flower.Flower;
 import java.util.List;
 @Service
 public class FlowerService {
-    public FlowerRepository  flowerRepository;
+    private FlowerRepository  flowerRepository;
     @Autowired
     public FlowerService(FlowerRepository flowerRepository) {
         this.flowerRepository = flowerRepository;

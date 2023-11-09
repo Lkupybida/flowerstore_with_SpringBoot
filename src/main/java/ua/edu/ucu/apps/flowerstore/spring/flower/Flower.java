@@ -2,7 +2,11 @@ package ua.edu.ucu.apps.flowerstore.spring.flower;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
 
 @Getter
 @Setter
@@ -17,7 +21,8 @@ public class Flower {
     @Id
     private Long id;
 
-    public Flower(double sepalLength, FlowerColor flowerColor, double price, FlowerType flowerType) {
+    public Flower(double sepalLength, FlowerColor flowerColor,
+                  double price, FlowerType flowerType) {
         this.sepalLength = sepalLength;
         this.flowerColor = flowerColor;
         this.price = price;
