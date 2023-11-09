@@ -22,7 +22,8 @@ public class FlowerTest {
 
     @BeforeEach
     public void init() {
-        flower = new Flower(DEFAULT_SEPAL_LENGTH, DEFAULT_COLOR, DEFAULT_PRICE, DEFAULT_FLOWER_TYPE);
+        flower = new Flower(DEFAULT_SEPAL_LENGTH,
+                DEFAULT_COLOR, DEFAULT_PRICE, DEFAULT_FLOWER_TYPE);
     }
 
     @Test

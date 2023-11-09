@@ -23,7 +23,8 @@ public class Rose extends Flower {
     }
 
     public Rose() {
-        super(DEFAULT_SEPAL_LENGTH, DEFAULT_COLOR, DEFAULT_PRICE, DEFAULT_FLOWER_TYPE);
+        super(DEFAULT_SEPAL_LENGTH, DEFAULT_COLOR,
+                DEFAULT_PRICE, DEFAULT_FLOWER_TYPE);
     }
 
     @Override

@@ -8,16 +8,17 @@ import lombok.Setter;
 import lombok.ToString;
 
 
-@Getter
 @Setter
 @ToString
 @Entity
 @NoArgsConstructor
 public class Flower {
     private double sepalLength;
+    @Getter
     private double price;
     private FlowerColor flowerColor;
     private FlowerType flowerType;
+    @Getter
     @Id
     private Long id;
 
@@ -48,7 +49,4 @@ public class Flower {
         this.id = id;
     }
 
-    public Long getId() {
-        return id;
-    }
 }

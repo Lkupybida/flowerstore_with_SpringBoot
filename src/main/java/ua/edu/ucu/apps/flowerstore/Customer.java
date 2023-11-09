@@ -1,6 +1,5 @@
 package ua.edu.ucu.apps.flowerstore;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
