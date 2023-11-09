@@ -12,6 +12,7 @@ import lombok.ToString;
 @ToString
 @Entity
 @NoArgsConstructor
+@SuppressWarnings("HiddenField")
 public class Flower {
     private double sepalLength;
     @Getter

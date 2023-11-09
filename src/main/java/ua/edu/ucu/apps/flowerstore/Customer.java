@@ -3,6 +3,7 @@ package ua.edu.ucu.apps.flowerstore;
 import lombok.Getter;
 
 @Getter
+@SuppressWarnings("HiddenField")
 public class Customer {
     private double moneyInWallet;
     private double moneyOnPaypal;
